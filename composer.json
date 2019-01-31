@@ -1,0 +1,35 @@
+{
+    "name": "artifishall/bootstrap_form",
+    "description": "",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Zach Chisholm",
+            "email": "zach@artifishall.com"
+        }
+    ],
+    "require": {
+        "laravelcollective/html": "^5.5",
+        "artifishall/toolbox": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:artifishall/toolbox.git"
+        }
+    ],
+    "autoload": {
+       "psr-4": {
+         "Artifishall\\BootstrapForms\\": "src"
+        }
+    },
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Artifishall\\BootstrapForms\\ServiceProvider"
+            ]
+        }
+    }
+
+}
