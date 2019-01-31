@@ -14,7 +14,7 @@
         <div class="input-group-addon">{{$group['before']}}</div>
     @endif
 
-    @include("components.form.group.$type", $input_data)
+    @include("bootstrap_forms::group.$type", $input_data)
 
     @if(!empty($group['after']))
         <div class="input-group-addon">{{$group['after']}}</div>
