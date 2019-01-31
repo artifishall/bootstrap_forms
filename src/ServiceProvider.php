@@ -3,6 +3,7 @@
 namespace Artifishall\BootstrapForms;
 
 use Form;
+use Illuminate\Support\Facades\View;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -14,6 +15,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/views', 'bootstrap_forms');
+        View::composer(['bootstrap_forms::group'],'Artifishall\BootstrapForms\ViewComposers\ComponantComposer');
 
         Form::component('bsText', 'bootstrap_forms::group', ['name', 'value' => null, 'title' => null, 'attributes' => [], 'extras' => null, 'type' => 'text']);
         Form::component('bsTime', 'bootstrap_forms::group', ['name', 'value' => null, 'title' => null, 'attributes' => [], 'extras' => null, 'type' => 'time']);
